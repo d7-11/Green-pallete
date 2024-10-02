@@ -131,7 +131,7 @@ body{
     display: flex;
     gap: 22px;
     align-items: center;
-
+    margin-bottom: 50px;
 }
 
 .about__text{
@@ -276,7 +276,7 @@ body{
 
 .prices__item{
     font-size: 24px;
-    min-width: 442px;
+    max-width: 442px;
     text-align: left;
     margin: 10px; 
 }
@@ -308,12 +308,11 @@ body{
 .work__list{
 list-style-type: none;
 counter-reset: my-counter;
-min-width: 1056px;
+max-width: 1056px;
 display: flex;
 flex-wrap: wrap;
 justify-content: center;
 gap: 0 15px;
-
 }
 
 .work__item{
@@ -361,7 +360,8 @@ gap: 0 15px;
 }
 
 .accordeon{
-    column-count: 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 0 22px;
 }
 
@@ -390,9 +390,11 @@ gap: 0 15px;
     top: 3px;
     right: 40px;
 }
-
 .accordeon__descr{
     display: none;
+}
+.accordeon__item.accordeon__item-active .accordeon__descr{
+    display: block;
 }
 
 .contact-form__inner{
@@ -635,6 +637,10 @@ gap: 0 15px;
     .projects__gallery{
         gap: 20px 10px;
     }
+    .team__list{
+        flex-wrap: wrap;
+        gap: 20px 60px;
+    }
     
 }
 @media(max-width: 970px){
@@ -650,7 +656,6 @@ gap: 0 15px;
     }
 }
 @media(max-width: 840px){
-
     .header-content__img{
         max-width: 370px;
     }
@@ -752,6 +757,7 @@ gap: 0 15px;
     }
     .header__title{
         max-width: 100%;
+        font-size: 28px;
     }
     .header-content__btn--desc{
         display: inline-block;
@@ -815,6 +821,10 @@ gap: 0 15px;
     .footer__text{
         font-size: 24px;
     }
+    .team__text{
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
 
 }
 
@@ -850,7 +860,9 @@ gap: 0 15px;
     .container{
         max-width: 1220px;
         padding: 0 10px;
-        
+    }
+    .header__inner{
+        height: auto;
     }
     .header-top{
         flex-wrap: wrap;
@@ -874,7 +886,6 @@ gap: 0 15px;
     }
     .header-content__btn--desc{
         display: block;
-        margin-bottom: 150px;
     }
     .section-mb,
     .section-ms,
@@ -917,10 +928,12 @@ gap: 0 15px;
         font-size: 24px;
     }
     .prices__item{
-        font-size: 18px;
+        font-size: 16px;
     }
+
     .prices__list{
         padding: 10px 10px 28px;
+        max-width: 327px;
     }
     .footer__left{
         align-items: flex-start;
@@ -932,7 +945,11 @@ gap: 0 15px;
 
 
 @media(max-width: 360px){
-   .header__title{
+   .title{
+    font-size: 24px;
+    margin-bottom: 20px;
+   }
+    .header__title{
     margin: 12px 0 20px;
    }
    .header-content__text-mob{
@@ -951,6 +968,11 @@ gap: 0 15px;
    }
    .work__item::before{
     font-size: 36px;
-
+   }
+   .team__text{
+    font-size: 14px;
+   }
+   .team__item-descr{
+    font-size: 14px;
    }
 }
