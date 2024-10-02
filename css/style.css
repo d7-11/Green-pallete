@@ -825,7 +825,15 @@ gap: 0 15px;
         font-size: 18px;
         margin-bottom: 20px;
     }
-
+    .accordeon__title{
+        font-size: 18px;
+    }
+    .accordeon__descr{
+        font-size: 14px;
+    }
+    .accordeon__item{
+        margin-bottom: 20px;
+    }
 }
 
 @media(max-width: 640px){
@@ -851,6 +859,9 @@ gap: 0 15px;
     .work__list{
         display: flex;
         flex-direction: column;
+    }
+    .accordeon{
+        display: block;
     }
 }
 @media(max-width: 500px){
@@ -965,6 +976,7 @@ gap: 0 15px;
    .work__item{
     font-size: 14px;
     line-height: 32px;
+    margin-bottom: 20px;
    }
    .work__item::before{
     font-size: 36px;
@@ -974,5 +986,12 @@ gap: 0 15px;
    }
    .team__item-descr{
     font-size: 14px;
+   }
+   .accordeon__title{
+    padding-right: 40px;
+    font-size: 14px;
+   }
+   .accordeon__title::after{
+    right: 15px;
    }
 }
